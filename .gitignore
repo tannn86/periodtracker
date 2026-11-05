@@ -9,3 +9,8 @@ yarn-error.log
 .expo
 *.apk
 app/dist/
+
+# Native Firebase config: never commit, provide per environment
+google-services*.json
+GoogleService-Info*.plist
+firebase-config.json
