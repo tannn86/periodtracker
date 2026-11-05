@@ -7,7 +7,7 @@ import {
   localeTranslations,
   themeTranslations,
 } from '../resources/translations'
-import { ENV } from '../config/env'
+import { ENV, IGNORE_DEVICE_LOCALE } from '../config/env'
 import { useDispatch } from 'react-redux'
 import { currentLocaleSelector } from '../redux/selectors'
 import React from 'react'
@@ -20,7 +20,7 @@ let initLocale = defaultLocale
 try {
   const deviceLocale = getLocales()[0]?.languageCode
   const locales = Object.keys(appTranslations)
-  if (deviceLocale && locales.includes(deviceLocale)) {
+  if (!IGNORE_DEVICE_LOCALE && deviceLocale && locales.includes(deviceLocale)) {
     initLocale = deviceLocale as Locale
   }
 } catch (e) {

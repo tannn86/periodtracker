@@ -18,5 +18,9 @@ export const FAST_SIGN_UP = !!process.env.EXPO_PUBLIC_FAST_SIGN_UP
 
 export const AUDIO_BASE_URL = process.env.EXPO_PUBLIC_AUDIO_BASE_URL
 
+// When true, the app always starts in the resources `defaultLocale` instead of
+// following the device language. Users can still change language in Settings.
+export const IGNORE_DEVICE_LOCALE = process.env.EXPO_PUBLIC_IGNORE_DEVICE_LOCALE === 'true'
+
 // Optional features
 export const USE_AVATAR_CUSTOMIZATION = process.env.EXPO_PUBLIC_USE_AVATAR_CUSTOMIZATION === 'true'
